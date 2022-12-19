@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="library.css">
+</head>
+<body>
+    <header></header>
+    <div>
+        <div class="card">
+            <div>
+                <button type="button" id="read" value="red">Read</button>
+                <button type="button">Delete</button>
+            </div>
+        </div>
+        <button onclick="bookForm">NEW BOOK</button>
+        <form class="form">
+            <label>Title:
+                <input type="text" name="title" />
+            </label>
+            <label>Author:
+                <input type="text" name="author" />
+            </label>
+            <label>Number of Pages:
+                <input type="text" name="pages" />
+            </label>
+            <button type="submit" id="submit-form">Submit</button>
+        </form>
+    </div>
+    <script src="library.js"></script>
+</body>
+</html>
