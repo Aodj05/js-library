@@ -8,28 +8,36 @@
     <link rel="stylesheet" href="library.css">
 </head>
 <body>
-    <header></header>
-    <div>
-        <div class="card">
-            <div>
-                <button type="button" id="read" value="red">Read</button>
-                <button type="button">Delete</button>
-            </div>
+    <header class="header">
+        <h1>myLibrary</h1>
+        <img src="img/librarian.png">
+    </header>
+    <div class="main">
+        <div class="cards">
+            <button class="new-book">NEW BOOK</button>
+            <button type="button">Delete</button>
         </div>
-        <button onclick="bookForm">NEW BOOK</button>
-        <form class="form">
+    </div>
+    <div class="book-cards">
+        <form class="form" method="post">
             <label>Title:
-                <input type="text" name="title" />
+                <input type="text" name="title" id="title" />
             </label>
             <label>Author:
-                <input type="text" name="author" />
+                <input type="text" name="author" id="author" />
             </label>
             <label>Number of Pages:
-                <input type="text" name="pages" />
+                <input type="number" name="pages" id="pages" />
             </label>
+            <button type="button" onclick="getRead()" id="read" value="red">Read</button>
             <button type="submit" id="submit-form">Submit</button>
         </form>
     </div>
+        <footer class="footer">
+            Image by <a href="https://pixabay.com/users/prettysleepy-2973588/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5203251">Amy</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5203251">Pixabay</a>
+Image by <a href="https://pixabay.com/users/gdj-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1751335">Gordon Johnson</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1751335">Pixabay</a>
+Image by <a href="https://pixabay.com/users/darkmoon_art-1664300/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3057902">Dorothe</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3057902">Pixabay</a>
+        </footer>
     <script src="library.js"></script>
 </body>
 </html>

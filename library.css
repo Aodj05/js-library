@@ -2,3 +2,54 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 2.4fr .5fr;
+    height: 100%;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    background-image: url("img/shelves.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.active {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: all;
+}
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.book-card {
+    background-image: url("img/book.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+}
+
+.book-cards {
+    background-image: url("img/book.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+}
+
+.footer {
+    background-color: brown;
+}
