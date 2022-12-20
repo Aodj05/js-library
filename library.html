@@ -14,12 +14,12 @@
     </header>
     <div class="main">
         <div class="cards">
-            <button class="new-book">NEW BOOK</button>
-            <button type="button">Delete</button>
         </div>
     </div>
+    <button class="new-book" onclick="showForm()">NEW BOOK</button>
+    <button type="button">Delete</button>
     <div class="book-cards">
-        <form class="form" method="post">
+        <form class="form" id="form" method="post">
             <label>Title:
                 <input type="text" name="title" id="title" />
             </label>

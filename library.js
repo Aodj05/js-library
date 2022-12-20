@@ -1,14 +1,16 @@
 const bookCards = document.querySelector('.cards');
 const bookForm = document.querySelector('.form');
 const cards = document.querySelector('.book-cards');
-const showForm = document.querySelector('.new-book');
-showForm.addEventListener('click', () => {
-    cards.classList.add('active');
-})
 
-addNew.addEventListener('click', () => {
-    cards.classList.remove('active');
-})
+//form display
+function showForm() {
+    document.querySelector('.book-cards').style.display = 'block';
+}
+
+//form close
+function hideForm() {
+    document.querySelector('.book-cards').style.display = 'none';
+}
 
 // Library array
 let myLibrary = [];
@@ -24,15 +26,12 @@ function Book(title, author, pages, read) {
 
 // Form to get user input and Submit user input form to the library
 function addBookForm() {
-    /* document.getElementById('.book-card').style.display = 'block'; */
     bookForm.addEventListener('submit', function(e){
         e.preventDefault();
         let book = new Book(title.value, author.value, pages.value, read.value);
         myLibrary.push(book);
-        console.log(myLibrary);
-        console.log(book);
         addBookToLibrary();
-        /* displayBook(book); */
+        hideForm();
     });
 }
 addBookForm();
@@ -62,8 +61,8 @@ function displayBook(book) {
 
 // Deletes the book card from the library
 function deleteBook(title) {
-    let i = books.findIndex(b => b.title === title);
-    books.splice(i, 1);
+    let i = myLibrary.findIndex(b => b.title === title);
+    myLibrary.splice(i, 1);
 }
 
 // Toggle the status of the book
