@@ -66,4 +66,6 @@ function deleteBook(title) {
     myLibrary.splice(i, 1);
 }
 
-// Toggle the status of the book
+/* To-do: delete functionality
+   Title
+   attributions */
