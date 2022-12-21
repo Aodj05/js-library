@@ -1,6 +1,7 @@
 const bookCards = document.querySelector('.cards');
 const bookForm = document.querySelector('.form');
 const cards = document.querySelector('.book-cards');
+const reader = document.querySelector('.read');
 
 //form display
 function showForm() {
@@ -66,10 +67,3 @@ function deleteBook(title) {
 }
 
 // Toggle the status of the book
-function getRead() {
-    if(document.getElementById("read").value === "red") {
-        read.value = "red";
-    } else {
-        read.value = "green";
-    }
-}

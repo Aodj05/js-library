@@ -12,9 +12,20 @@ body {
 }
 
 img {
-    height: 200px;
+    height: 194px;
     width: 200px;
 }
+
+p {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+body > button {
+    background-color: chocolate;
+    border: .1px solid brown;
+}
+
 .header {
     display: flex;
     flex-direction: column;
@@ -41,6 +52,61 @@ img {
     width: 500px;
     padding-left: 15px;
     justify-content: space-evenly;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: green;
+}
+
+input:focused + .slider {
+    box-shadow: 0 0 1px gray;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 .book-card {
