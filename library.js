@@ -66,6 +66,3 @@ function deleteBook(title) {
     myLibrary.splice(i, 1);
 }
 
-/* To-do: delete functionality
-   Title
-   attributions */
